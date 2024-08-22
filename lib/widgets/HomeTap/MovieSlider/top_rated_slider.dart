@@ -25,8 +25,7 @@ class TopRatedSlider extends StatelessWidget {
           height: 20,
         ),
         SizedBox(
-          height: 311,
-          width: 140,
+          height: MediaQuery.of(context).size.height * 0.37,
           child: Container(
             color: AppColors.graylightColor,
             child: Padding(
@@ -56,8 +55,12 @@ class TopRatedSlider extends StatelessWidget {
                                     children: [
                                       Container(
                                         color: Colors.white,
-                                        height: 200,
-                                        width: 140,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.24,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.35,
                                         child: Image.asset(
                                           image,
                                           fit: BoxFit.fill,
@@ -65,17 +68,17 @@ class TopRatedSlider extends StatelessWidget {
                                       ),
                                       Image.asset("assets/images/bookmark.png",
                                           color: AppColors.grayColor),
-                                      Icon(
+                                      const Icon(
                                         Icons.add,
                                         color: Colors.white,
                                       )
                                     ],
                                   ),
-                                  SizedBox(height: 4),
+                                  const SizedBox(height: 4),
                                   Row(
                                     children: [
                                       Image.asset("assets/images/star.png"),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 4,
                                       ),
                                       Text(

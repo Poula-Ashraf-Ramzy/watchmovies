@@ -43,8 +43,8 @@ class popularSlider extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       SizedBox(
-                        height: 150,
-                        width: 140,
+                        height: MediaQuery.of(context).size.height * 0.2,
+                        width: MediaQuery.of(context).size.width * 0.36,
                         child: Image.asset(
                           image,
                           fit: BoxFit.fill,
@@ -55,8 +55,8 @@ class popularSlider extends StatelessWidget {
                 ),
 
                 Container(
-                  width: 400,
-                  height: 400,
+                  width: MediaQuery.of(context).size.width * 1,
+                  height: MediaQuery.of(context).size.height * 1,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     gradient: LinearGradient(
@@ -88,7 +88,7 @@ class popularSlider extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                           left: 150,
                         ),
                         child: Column(
@@ -98,9 +98,9 @@ class popularSlider extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Padding(
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                           left: 150,
                         ),
                         child: Column(

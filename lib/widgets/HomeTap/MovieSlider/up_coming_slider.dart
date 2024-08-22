@@ -16,8 +16,8 @@ class upComingSlider extends StatelessWidget {
           height: 20,
         ),
         SizedBox(
-          height: 250,
-          width: 140,
+          height: MediaQuery.of(context).size.height * 0.3,
+          width: MediaQuery.of(context).size.width * 0.35,
           child: Container(
             color: AppColors.graylightColor,
             child: Padding(
@@ -44,8 +44,10 @@ class upComingSlider extends StatelessWidget {
                                 children: [
                                   Container(
                                     color: Colors.white,
-                                    height: 200,
-                                    width: 140,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.24,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.35,
                                     child: Image.asset(
                                       image,
                                       fit: BoxFit.fill,
