@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-
 import 'package:movies_app/constants/ApiConstants.dart';
 
 class ApiManager {
@@ -22,9 +21,7 @@ class ApiManager {
 
       
     } catch (e) {
-      
-      throw e;
-    
+      rethrow;
     }
   }
 }
