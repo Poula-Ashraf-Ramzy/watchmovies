@@ -12,51 +12,61 @@ class upComingSlider extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(
-          label,
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
         const SizedBox(
-          height: 10,
+          height: 20,
         ),
         SizedBox(
-          height: 180,
+          height: 250,
           width: 140,
           child: Container(
             color: AppColors.graylightColor,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              itemCount: 20,
-              itemBuilder: (contex, Index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(6),
-                    child: SizedBox(
-                      child: Stack(
-                        children: [
-                          Container(
-                            color: Colors.white,
-                            height: 200,
-                            width: 140,
-                            child: Image.asset(
-                              image,
-                              fit: BoxFit.fill,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Stack(
+                children: [
+                  Text(
+                    label,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: 20,
+                      itemBuilder: (contex, Index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(6),
+                            child: SizedBox(
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    color: Colors.white,
+                                    height: 200,
+                                    width: 140,
+                                    child: Image.asset(
+                                      image,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  Image.asset("assets/images/bookmark.png",
+                                      color: AppColors.grayColor),
+                                  const Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                          Image.asset("assets/images/bookmark.png",
-                              color: AppColors.grayColor),
-                          const Icon(
-                            Icons.add,
-                            color: Colors.white,
-                          )
-                        ],
-                      ),
+                        );
+                      },
                     ),
                   ),
-                );
-              },
+                ],
+              ),
             ),
           ),
         ),

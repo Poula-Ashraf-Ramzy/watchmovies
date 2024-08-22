@@ -4,8 +4,14 @@ import 'package:movies_app/constants/color.dart';
 
 class popularSlider extends StatelessWidget {
   String image;
+  String nameMovie;
+  String releaseTime;
 
-  popularSlider({super.key, required this.image});
+  popularSlider(
+      {super.key,
+      required this.image,
+      required this.nameMovie,
+      required this.releaseTime});
 
   @override
   Widget build(BuildContext context) {
@@ -74,27 +80,36 @@ class popularSlider extends StatelessWidget {
                   ),
                 ),
                 // Movie Info
-                const Positioned(
+                Positioned(
                   bottom: 20,
                   left: 10,
                   right: 10,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Dora and the Lost City of Gold",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 150,
+                        ),
+                        child: Column(
+                          children: [
+                            Text(nameMovie,
+                                style: Theme.of(context).textTheme.titleMedium),
+                          ],
                         ),
                       ),
                       SizedBox(height: 5),
-                      Text(
-                        "2019  PG-13  2h 7m",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 150,
+                        ),
+                        child: Column(
+                          children: [
+                            Text(
+                              releaseTime,
+                              style: Theme.of(context).textTheme.titleSmall,
+                            ),
+                          ],
                         ),
                       ),
                     ],

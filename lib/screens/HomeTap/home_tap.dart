@@ -27,7 +27,11 @@ class HomeTabState extends State<HomeTab> {
                 physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
-                    popularSlider(image: "assets/images/van.png"),
+                    popularSlider(
+                      image: "assets/images/van.png",
+                      nameMovie: "Dora and the Lost City of Gold",
+                      releaseTime: "2019  PG-13  2h 7m",
+                    ),
                     const SizedBox(
                       height: 10,
                     ),
