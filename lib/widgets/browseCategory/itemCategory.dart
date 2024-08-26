@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:movies_app/data/browseModel/categoryModel.dart';
+import 'package:movies_app/data/Models/browseModel/categoryModel.dart';
 
 class ItemCategory extends StatelessWidget {
   String imageurl;

@@ -5,12 +5,13 @@ class BookMarkImage extends StatelessWidget {
   bool selectedToWatchList;
   double imageHeight;
   double imagewidth;
-
+  String imagepath;
   BookMarkImage({
     super.key,
     required this.selectedToWatchList,
     required this.imageHeight,
     required this.imagewidth,
+    required this.imagepath,
   });
 
   @override
@@ -18,15 +19,15 @@ class BookMarkImage extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Stack(
       children: [
-        Image.asset(
-          "assets/images/Image.png",
+        Image.network(
+          'https://image.tmdb.org/t/p/w500$imagepath',
           fit: BoxFit.fill,
           height: imageHeight,
           width: imagewidth,
         ),
         Positioned(
-          top: -5,
-          left: -9,
+          top: -7,
+          left: -11,
           child: Icon(
             Icons.bookmark,
             color: selectedToWatchList == false
@@ -36,8 +37,8 @@ class BookMarkImage extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: width * 0.016,
-          left: width * 0.011,
+          top: width * 0.009,
+          left: width * 0.005,
           child: Icon(
             selectedToWatchList == false ? Icons.add : Icons.check,
             color: AppColors.whiteColor,

@@ -20,7 +20,7 @@ class TopVideoTrailer extends StatelessWidget {
           imagePath,
           fit: BoxFit.fill,
           width: double.infinity,
-          height: height * 0.25,
+          height: height * 0.29,
         ),
         Positioned(
           bottom: width * 0.2,
