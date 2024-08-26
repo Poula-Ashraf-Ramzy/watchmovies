@@ -83,7 +83,7 @@ class _BrowseTapState extends State<BrowseTap> {
                           crossAxisSpacing: height * 0.05,
                           mainAxisSpacing: height * 0.05,
                           mainAxisExtent: height * 0.125),
-                      itemCount: 10,
+                      itemCount: 18,
                       itemBuilder: (context, index) {
                         return InkWell(
                           onTap: () {
@@ -113,11 +113,3 @@ class _BrowseTapState extends State<BrowseTap> {
   }
 }
 
-class ItemsArgs {
-  int id;
-  String name;
-  ItemsArgs({
-    required this.id,
-    required this.name,
-  });
-}

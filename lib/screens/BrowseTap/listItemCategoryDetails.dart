@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movies_app/constants/color.dart';
-import 'package:movies_app/data/browseModel/categoryModel.dart';
+import 'package:movies_app/data/Models/browseModel/categoryModel.dart';
 import 'package:movies_app/viewModel/browseCategory.dart';
 import 'package:movies_app/widgets/browseCategory/itemCategoryDetails.dart';
 import 'package:provider/provider.dart';
