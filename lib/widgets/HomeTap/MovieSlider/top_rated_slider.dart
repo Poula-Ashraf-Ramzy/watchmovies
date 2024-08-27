@@ -22,6 +22,7 @@ class _TopRatedSliderState extends State<TopRatedSlider> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -31,6 +32,7 @@ class _TopRatedSliderState extends State<TopRatedSlider> {
           child: Container(
             color: AppColors.graylightColor,
             child: Padding(
+
               padding: EdgeInsets.all(height * 0.010),
               child: Stack(
                 children: [
@@ -39,6 +41,7 @@ class _TopRatedSliderState extends State<TopRatedSlider> {
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   Padding(
+
                     padding: EdgeInsets.only(top: height * 0.03),
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -48,7 +51,9 @@ class _TopRatedSliderState extends State<TopRatedSlider> {
                         final isSelected = _selectedIndices.contains(index);
 
                         return Padding(
+
                           padding: EdgeInsets.all(height * 0.010),
+
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(6),
                             child: SizedBox(
@@ -58,6 +63,7 @@ class _TopRatedSliderState extends State<TopRatedSlider> {
                                   Expanded(
                                     child: Stack(
                                       children: [
+
                                         InkWell(
                                           onTap: () {
                                             Navigator.of(context).push(
